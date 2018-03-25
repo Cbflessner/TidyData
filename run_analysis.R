@@ -36,8 +36,8 @@ x_full<-rbind(x_test, x_train)
 colnames(x_full)[c(1,2)]<-c("activity","subject")
 
 ##get the columns that relate to means and standard deviations
-mean_col<-grep("[mM]ean()", names(x_full))
-std_col<-grep("[sS][tT][dD]()", names(x_full))
+mean_col<-grep("mean\\(\\)", names(x_full), ignore.case=TRUE)
+std_col<-grep("std\\(\\)", names(x_full), ignore.case=TRUE)
 all_col<-c(1,2,mean_col,std_col)
 
 ##Extract only measurements of mean and standard deviation
@@ -49,6 +49,22 @@ mean_std$activity<-ordered(mean_std$activity, levels=c(1,2,3,4,5,6),
                            labels=c("Walking","Walking Upstairs",
                                     "Walking DownStairs", "Sitting", "Standing", 
                                     "Laying"))
+
+##make column names more readable
+names(mean_std)<-sub("^t", "time_", names(mean_std) )
+names(mean_std)<-sub("^f", "frequency_", names(mean_std) )
+
+mean_name<-grep("mean\\(\\)", names(mean_std),ignore.case=TRUE)
+names(mean_std)[mean_name]<-paste0("mean_of_", names(mean_std)[mean_name])
+names(mean_std)[mean_name]<-sub("-mean\\(\\)", "", names(mean_std)[mean_name])
+
+std_name<-grep("std\\(\\)", names(mean_std),ignore.case=TRUE)
+names(mean_std)[std_name]<-paste0("standard_dev_of_", names(mean_std)[std_name])
+names(mean_std)[std_name]<-sub("-std\\(\\)", "", names(mean_std)[std_name])
+
+names(mean_std)<-sub("-X", "_in_the_x_direction", names(mean_std))
+names(mean_std)<-sub("-Y", "_in_the_y_direction", names(mean_std))
+names(mean_std)<-sub("-Z", "_in_the_z_direction", names(mean_std))
 
 
 ##get the average of each variable grouped by activity and subject
