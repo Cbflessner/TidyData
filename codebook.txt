@@ -1,41 +1,79 @@
-Feature Selection 
-=================
+Colum descriptions
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. 
-Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration 
-signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+"activity"-The type of activity the subject was doing
+"subject"-A number indicating which of the 30 volunteers was being measured                                               
+"mean_of_time_BodyAcc_in_the_x_direction"- A mean of the time domain signal captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher 
+"mean_of_time_BodyAcc_in_the_y_direction"- A mean of the time domain signal captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher      
+ "mean_of_time_BodyAcc_in_the_z_direction"- A mean of the time domain signal captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher 
+"mean_of_time_GravityAcc_in_the_x_direction"- A mean of the time domain signal captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Gravitational motion must have lower than a 0.3 Hz frequency              
+ "mean_of_time_GravityAcc_in_the_y_direction"- A mean of the time domain signal captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Gravitational motion must have lower than a 0.3 Hz frequency              
+"mean_of_time_GravityAcc_in_the_z_direction" - A mean of the time domain signal captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Gravitational motion must have lower than a 0.3 Hz frequency                           
+ "mean_of_time_BodyAccJerk_in_the_x_direction"- A mean of the time domain jerk measurement captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher   
+"mean_of_time_BodyAccJerk_in_the_y_direction"- A mean of the time domain jerk measurement captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher                
+"mean_of_time_BodyAccJerk_in_the_z_direction"- A mean of the time domain jerk measurement captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher   
+"mean_of_time_BodyGyro_in_the_x_direction"- A mean of the time domain signal captured using an gyroscope in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher                
+"mean_of_time_BodyGyro_in_the_y_direction"- A mean of the time domain signal captured using an gyroscope in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher
+"mean_of_time_BodyGyro_in_the_z_direction"  - A mean of the time domain signal captured using an gyroscope in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher              
+"mean_of_time_BodyGyroJerk_in_the_x_direction"- A mean of the time domain jerk measurement captured using an gyroscope in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher   
+"mean_of_time_BodyGyroJerk_in_the_y_direction"- A mean of the time domain jerk measurement captured using an gyroscope in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher               
+"mean_of_time_BodyGyroJerk_in_the_z_direction"- A mean of the time domain jerk measurement captured using an gyroscope in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher   
+"mean_of_time_BodyAccMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the accelerometer                                
+"mean_of_time_GravityAccMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the gryoscope  
+"mean_of_time_BodyAccJerkMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the accelerometer calculated via the Eculidean norm                             
+"mean_of_time_BodyGyroMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the gyroscope
+"mean_of_time_BodyGyroJerkMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the gryoscope calculated via the Eculidean norm                             
+"mean_of_frequency_BodyAcc_in_the_x_direction"-A mean of the frequency domain signal captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher
+"mean_of_frequency_BodyAcc_in_the_y_direction"-A mean of the frequency domain signal captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher
+"mean_of_frequency_BodyAcc_in_the_z_direction"-A mean of the frequency domain signal captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher
+"mean_of_frequency_BodyAccJerk_in_the_x_direction"- A mean of the frequency domain jerk measurement captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher           
+"mean_of_frequency_BodyAccJerk_in_the_y_direction"- A mean of the frequency domain jerk measurement captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher  
+"mean_of_frequency_BodyAccJerk_in_the_z_direction"- A mean of the frequency domain jerk measurement captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher          
+"mean_of_frequency_BodyGyro_in_the_x_direction"- A mean of the frequency domain jerk measurement captured using an gyroscope in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher  
+"mean_of_frequency_BodyGyro_in_the_y_direction"- A mean of the frequency domain jerk measurement captured using an gyroscope in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher             
+"mean_of_frequency_BodyGyro_in_the_z_direction"- A mean of the frequency domain jerk measurement captured using an gyroscope in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher  
+"mean_of_frequency_BodyAccMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the Accelorometer                             
+"mean_of_frequency_BodyBodyAccJerkMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the accelerometer calculated via the Eculidean norm 
+"mean_of_frequency_BodyBodyGyroMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the gyroscope                        
+"mean_of_frequency_BodyBodyGyroJerkMag"-A mean of the magnitude of the Jerk signal given from the body and collected via the gyroscope calculated via the Eculidean norm 
+"standard_dev_of_time_BodyAcc_in_the_x_direction"- A mean of the time domain signal captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher          
+"standard_dev_of_time_BodyAcc_in_the_x_direction"- A standard deviation of the time domain signal captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher 
+"standard_dev_of_time_BodyAcc_in_the_y_direction"- A standard deviation of the time domain signal captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher      
+ "standard_dev_of_time_BodyAcc_in_the_z_direction"- A standard deviation of the time domain signal captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher 
+"standard_dev_of_time_GravityAcc_in_the_x_direction"- A standard deviation of the time domain signal captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Gravitational motion must have lower than a 0.3 Hz frequency              
+ "standard_dev_of_time_GravityAcc_in_the_y_direction"- A standard deviation of the time domain signal captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Gravitational motion must have lower than a 0.3 Hz frequency              
+"standard_dev_of_time_GravityAcc_in_the_z_direction" - A standard deviation of the time domain signal captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Gravitational motion must have lower than a 0.3 Hz frequency                           
+ "standard_dev_of_time_BodyAccJerk_in_the_x_direction"- A standard deviation of the time domain jerk measurement captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher   
+"standard_dev_of_time_BodyAccJerk_in_the_y_direction"- A standard deviation of the time domain jerk measurement captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher                
+"standard_dev_of_time_BodyAccJerk_in_the_z_direction"- A standard deviation of the time domain jerk measurement captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher   
+"standard_dev_of_time_BodyGyro_in_the_x_direction"- A standard deviation of the time domain signal captured using an gyroscope in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher                
+"standard_dev_of_time_BodyGyro_in_the_y_direction"- A standard deviation of the time domain signal captured using an gyroscope in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher
+"standard_dev_of_time_BodyGyro_in_the_z_direction"  - A standard deviation of the time domain signal captured using an gyroscope in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher              
+"standard_dev_of_time_BodyGyroJerk_in_the_x_direction"- A standard deviation of the time domain jerk measurement captured using an gyroscope in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher   
+"standard_dev_of_time_BodyGyroJerk_in_the_y_direction"- A standard deviation of the time domain jerk measurement captured using an gyroscope in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher               
+"standard_dev_of_time_BodyGyroJerk_in_the_z_direction"- A standard deviation of the time domain jerk measurement captured using an gyroscope in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher   
+"standard_dev_of_time_BodyAccMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the accelerometer                                
+"standard_dev_of_time_GravityAccMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the gryoscope  
+"standard_dev_of_time_BodyAccJerkMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the accelerometer calculated via the Eculidean norm                             
+"standard_dev_of_time_BodyGyroMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the gyroscope
+"standard_dev_of_time_BodyGyroJerkMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the gryoscope calculated via the Eculidean norm                             
+"standard_dev_of_frequency_BodyAcc_in_the_x_direction"-A standard deviation of the frequency domain signal captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher
+"standard_dev_of_frequency_BodyAcc_in_the_y_direction"-A standard deviation of the frequency domain signal captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher
+"standard_dev_of_frequency_BodyAcc_in_the_z_direction"-A standard deviation of the frequency domain signal captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher
+"standard_dev_of_frequency_BodyAccJerk_in_the_x_direction"- A standard deviation of the frequency domain jerk measurement captured using an accelerometer in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher           
+"standard_dev_of_frequency_BodyAccJerk_in_the_y_direction"- A standard deviation of the frequency domain jerk measurement captured using an accelerometer in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher  
+"standard_dev_of_frequency_BodyAccJerk_in_the_z_direction"- A standard deviation of the frequency domain jerk measurement captured using an accelerometer in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher          
+"standard_dev_of_frequency_BodyGyro_in_the_x_direction"- A standard deviation of the frequency domain jerk measurement captured using an gyroscope in the x direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher  
+"standard_dev_of_frequency_BodyGyro_in_the_y_direction"- A standard deviation of the frequency domain jerk measurement captured using an gyroscope in the y direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher             
+"standard_dev_of_frequency_BodyGyro_in_the_z_direction"- A standard deviation of the frequency domain jerk measurement captured using an gyroscope in the z direction. Body motion is seperated from gravitational motion using a Butterworth low-pass filter.  Body motion must have 0.3 Hz frequency or higher  
+"standard_dev_of_frequency_BodyAccMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the Accelorometer                             
+"standard_dev_of_frequency_BodyBodyAccJerkMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the accelerometer calculated via the Eculidean norm 
+"standard_dev_of_frequency_BodyBodyGyroMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the gyroscope                        
+"standard_dev_of_frequency_BodyBodyGyroJerkMag"-A standard deviation of the magnitude of the Jerk signal given from the body and collected via the gyroscope calculated via the Eculidean norm 
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using 
-the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
-
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
-
-The set of variables that were estimated from these signals are: 
-
-mean(): Mean value
-std(): Standard deviation
 
 
 
-These mean and standard deviation values are then themselves summarized.  The result is the mean of each value across subjects and activies for a total of 180 observations.
+
+Summary Calculations
+
+The mean was calculated for each of the above measurments for each subject and activity.  The final data set shows this mean of means or mean of standard deviations.
